@@ -1,0 +1,32 @@
+[
+    {
+    "id": 1,
+    "name": "Campera Negra Cuero",
+    "price": 25500,
+    "src": "/resources/img/productos-img/camperaCueroN.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Campera Marron Cuero",
+    "price": 25500,
+    "src": "/resources/img/productos-img/camperaCueroM.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Camisa",
+    "price": 15500,
+    "src": "/resources/img/productos-img/camisa.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Remera",
+    "price": 12500,
+    "src": "/resources/img/productos-img/remera.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Jean",
+    "price": 20000,
+    "src": "/resources/img/productos-img/jean.jpg"
+  },
+]
