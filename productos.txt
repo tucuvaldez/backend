@@ -28,5 +28,5 @@
     "name": "Jean",
     "price": 20000,
     "src": "/resources/img/productos-img/jean.jpg"
-  },
+  }
 ]

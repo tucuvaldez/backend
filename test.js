@@ -9,8 +9,8 @@ async function test() {
     });
 
     let getAll = await productos.getAll();
-    let getById = await productos.getById(1);
-    let deleteById = await productos.deleteById(2);
+    let getById = await productos.getById('1');
+    let deleteById = await productos.deleteById('2');
     //let deleteAll = await productos.deleteAll();
     console.log(save);
     console.log(getAll);
