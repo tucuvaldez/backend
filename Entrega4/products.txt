@@ -1,0 +1,56 @@
+[
+  {
+    "title": "(nombre del producto)",
+    "price": 2000,
+    "thumbnail": "src/img/prod1",
+    "id": 1
+  },
+  {
+    "title": "(nombre del prod)",
+    "price": 7000,
+    "thumbnail": "src/img/prod5",
+    "id": 2
+  },
+  {
+    "title": "pantalon",
+    "price": 3000,
+    "thumbnail": "src/img/prod5",
+    "id": 3
+  },
+  {
+    "title": "camiseta",
+    "price": 3000,
+    "thumbnail": "src/img/prod5",
+    "id": 4
+  },
+  {
+    "title": "jean",
+    "price": 6000,
+    "thumbnail": "src/img/prod5",
+    "id": 5
+  },
+  {
+    "title": "anteojo",
+    "price": 3000,
+    "thumbnail": "src/img/prod5",
+    "id": 6
+  },
+  {
+    "title": "pantalon",
+    "price": 3000,
+    "thumbnail": "src/img/prod5",
+    "id": 7
+  },
+  {
+    "title": "pantalon",
+    "price": 3000,
+    "thumbnail": "src/img/prod5",
+    "id": 8
+  },
+  {
+    "title": "jarron",
+    "price": 3000,
+    "thumbnail": "src/img/jarron",
+    "id": 9
+  }
+]
