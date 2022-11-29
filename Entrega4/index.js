@@ -51,6 +51,8 @@ routerProd.delete('/:id', async (req, res) => {
     const prod = req.params.id
     try {
         let deleted = await products.deleteById(prod)
+
+        console.log(deleted)
         res.json({
             //podrias darme una mano para mostrar el "deleted", no me doy cuenta como mostrarlo
             prodDeleted: deleted,
@@ -65,8 +67,8 @@ routerProd.delete('/:id', async (req, res) => {
 // PUT reemplazando un producto existente por uno nuevo
 // en este caso, puedo modificar pasando los datos por el body, pero no entiendo muy bien el porque del /:id, me podrias explicar por favor? Mil gracias
 routerProd.put('/:id', async (req, res) => {
-
-    const result = await products.update(req.body)
+    const id = parseInt(req.params.id)
+    const result = await products.update(req.body, id)
     console.log(result)
     if (result.length > 0) {
         res.send(`
