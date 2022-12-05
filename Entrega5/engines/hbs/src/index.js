@@ -1,26 +1,37 @@
+// Express settings
 const express = require('express');
-const app = express()
+const app = express();
+
 // JSON settings
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-// Engine set
-app.set('views', '.views');
-app.set('view engine', 'pug');
+
+// Handlebars setting
+const handlebars = require('express-handlebars');
+
+// Engine and app.set
+app.engine('handlebars', handlebars.engine())
+app.set('views', './engines/hbs/views')
+app.set('view engine', 'hbs')
+app.use(express.static('public'))
+
 // Products 
-const Container = require('../../api/productos')
-const products = new Container('../../../resources/productos.txt')
+const Container = require('../../../api/productos')
+const products = new Container('./resources/productos.txt')
+
 // GET and POST
 app.get('/', (req, res) => {
-    res.render('form.pug', {})
+    res.render('form', {})
 })
 app.get('/productos', async (req, res) => {
     const productos = await products.getAll();
-    res.render('prod.pug', { productos })
+    const length = productos.length > 0 ? true : false
+    res.render('prod', { productos, length })
 })
 app.post('/productos', async (req, res) => {
     let product = req.body
     if (product) {
-        await products.saveProduct(product)
+        await products.save(product)
         console.log(`Producto guardado : ${JSON.stringify(product)}`)
         res.redirect('/')
     }

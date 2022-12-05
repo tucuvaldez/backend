@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "compu",
+    "price": 234,
+    "src": "img/compu"
+  },
+  {
+    "id": 1,
+    "name": "mesa",
+    "price": 123,
+    "src": "img/mesa"
+  },
+  {
+    "id": 2,
+    "name": "mesa",
+    "price": 345,
+    "src": "img/mesa"
+  },
+  {
+    "id": 3,
+    "name": "mate",
+    "price": 234,
+    "src": "img/mate"
+  },
+  {
+    "id": 4,
+    "name": "botella",
+    "price": 1234,
+    "src": "img/botella"
+  }
+]
