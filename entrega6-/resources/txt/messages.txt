@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2022-12-5  17:39",
+    "mail": "ric@gmail.com",
+    "text": "Hola"
+  },
+  {
+    "date": "2022-12-5  17:42",
+    "mail": "xdfghj@gmail.com",
+    "text": "comoo andas"
+  },
+  {
+    "date": "2022-12-5  17:48",
+    "mail": "dhg@gmail.com",
+    "text": "Todo bien!"
+  },
+  {
+    "date": "2022-12-5  17:53",
+    "mail": "xfgh@gmail.com",
+    "text": "sdfgh"
+  },
+  {
+    "date": "2022-12-5  18:26",
+    "mail": "yuhygtr@gmail.com",
+    "text": "bueeeeeeeeee"
+  },
+  {
+    "date": "2022-12-5  18:27:20",
+    "mail": "dfghg@gmail.com",
+    "text": "sdfgfds"
+  }
+]

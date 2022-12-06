@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "name": "Copa",
+    "price": 1234,
+    "src": "img/copa"
+  },
+  {
+    "id": 1,
+    "name": "Jarron",
+    "price": 2345,
+    "src": "img/jarron"
+  }
+]

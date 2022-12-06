@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/tucuvaldez/backend#readme",
   "dependencies": {
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "node": "^19.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "description": ""
 }
