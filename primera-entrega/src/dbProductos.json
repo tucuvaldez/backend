@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Regular Fit",
+      "Cuello Redondo",
+      "Casual, Urbano",
+      "Poliester",
+      "All Season"
+    ],
+    "discount": 0,
+    "name": "Buzo Techwear Manga Patchwork",
+    "price": 7000,
+    "src1": "/resources/img/buzo1-1.jpg",
+    "src2": "/resources/img/buzo1-2.jpg",
+    "src3": "/resources/img/buzo1-3.jpg",
+    "src4": "/resources/img/buzo1-4.jpg",
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Slim Fit",
+      "Cuello Tiro Alto",
+      "Diario, Informal",
+      "Jersey",
+      "Primavera, Otoño, Invierno"
+    ],
+    "discount": 0,
+    "name": "Sweater Cuello Tiro Alto",
+    "price": 5500,
+    "src1": "/resources/img/buzo2-1.jpg",
+    "src2": "/resources/img/buzo2-2.jpg",
+    "src3": "/resources/img/buzo2-3.jpg",
+    "src4": "/resources/img/buzo2-4.jpg",
+    "stock": 50
+  },
+  {
+    "id": 3,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Regular Fit",
+      "Cuello Redondo Ancho",
+      "Urban, Tech",
+      "Algodon",
+      "All Season"
+    ],
+    "discount": 0,
+    "name": "Buzo con Estampado y Patchwork",
+    "price": 7200,
+    "src1": "/resources/img/buzo3-1.jpg",
+    "src2": "/resources/img/buzo3-2.jpg",
+    "src3": "/resources/img/buzo3-3.jpg",
+    "src4": "/resources/img/buzo3-4.jpg",
+    "stock": 50
+  },
+  {
+    "id": 4,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Regular Fit",
+      "Cuello Redondo",
+      "Diario, Informal",
+      "Poliester",
+      "All Season"
+    ],
+    "discount": 0,
+    "name": "Buzo Casual con Patrones",
+    "price": 7500,
+    "src1": "/resources/img/buzo4-1.jpg",
+    "src2": "/resources/img/buzo4-2.jpg",
+    "src3": "/resources/img/buzo4-3.jpg",
+    "src4": "/resources/img/buzo4-4.jpg",
+    "stock": 50
+  },
+  {
+    "id": 5,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Oversize",
+      "Hoodie",
+      "Tech, Urbano",
+      "Algodon",
+      "All Season"
+    ],
+    "discount": 0,
+    "name": "Hoodie Oversize Urban Tech con cierre y aros",
+    "price": 7500,
+    "src1": "/resources/img/buzo5-1.jpg",
+    "src2": "/resources/img/buzo5-2.jpg",
+    "src3": "/resources/img/buzo5-3.jpg",
+    "src4": "/resources/img/buzo5-4.jpg",
+    "stock": 50
+  }
+]
