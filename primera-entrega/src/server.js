@@ -8,8 +8,8 @@ const ContenedorArchivo = require('./contenedores/ContenedorArchivo.js')
 
 const app = express()
 
-const productosApi = new ContenedorArchivo('dbProductos.json')
-const carritosApi = new ContenedorArchivo('dbCarritos.json')
+const productosApi = new ContenedorArchivo('./dbProductos.json')
+const carritosApi = new ContenedorArchivo('./dbCarritos.json')
 
 //--------------------------------------------
 // permisos de administrador
