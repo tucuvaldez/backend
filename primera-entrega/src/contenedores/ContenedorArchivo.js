@@ -29,6 +29,7 @@ class Container {
         object.id = checkId(object, products)
         object.price = parseInt(object.price)
         object.timestamp = getTimestamp()
+        object.id = products[products.length - 1].id + 1
         try {
             console.log(`El siguiente elemento sera guardado : \n${JSON.stringify(object)}`)
             products.push(object)

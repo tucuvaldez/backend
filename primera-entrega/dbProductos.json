@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Regular Fit",
+      "Cuello Redondo",
+      "Casual, Urbano",
+      "Poliester",
+      "All Season"
+    ],
+    "discount": 0,
+    "name": "Buzo Techwear Manga Patchwork",
+    "price": 7000,
+    "src1": "/resources/img/buzo1-1.jpg",
+    "src2": "/resources/img/buzo1-2.jpg",
+    "src3": "/resources/img/buzo1-3.jpg",
+    "src4": "/resources/img/buzo1-4.jpg",
+    "stock": 50
+  },
+  {
+    "id": 2,
+    "cant": 0,
+    "category": "Buzo",
+    "description": [
+      "Slim Fit",
+      "Cuello Tiro Alto",
+      "Diario, Informal",
+      "Jersey",
+      "Primavera, Otoño, Invierno"
+    ],
+    "discount": 0,
+    "name": "Sweater Cuello Tiro Alto",
+    "price": 5500,
+    "src1": "/resources/img/buzo2-1.jpg",
+    "src2": "/resources/img/buzo2-2.jpg",
+    "src3": "/resources/img/buzo2-3.jpg",
+    "src4": "/resources/img/buzo2-4.jpg",
+    "stock": 50
+  },
+  {
+    "title": "pc gamer",
+    "price": 5000,
+    "thumbnail": "src/img/pc-gamer",
+    "id": 11,
+    "timestamp": "21/12/2022 - 13:47:12"
+  },
+  {
+    "title": "pc gamer",
+    "price": 5000,
+    "thumbnail": "src/img/pc-gamer",
+    "id": 12,
+    "timestamp": "21/12/2022 - 14:05:55"
+  },
+  {
+    "title": "pc gamer",
+    "price": 5000,
+    "thumbnail": "src/img/pc-gamer",
+    "id": 13,
+    "timestamp": "21/12/2022 - 14:05:59"
+  },
+  {
+    "title": "pc gamer",
+    "price": 5000,
+    "thumbnail": "src/img/pc-gamer",
+    "id": 14,
+    "timestamp": "21/12/2022 - 14:06:01"
+  }
+]
