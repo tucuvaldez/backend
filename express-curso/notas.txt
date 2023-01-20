@@ -1,0 +1,101 @@
+----------------------------------------------------------------
+                   */ VERBOS HTTP CRUD /*
+----------------------------------------------------------------
+
+HTTP VERBS "CRUD" (esta relacionado con el metodo de comunicacion)
+
+La peticion GET se utiliza por el cliente para realizar una peticion al servidor. Intenta obtener algo 
+
+La peticion POST se utiliza por el cliente para guardar/enviar algo
+
+La peticion PUT intenta actualizar algo
+
+La peticion DELETE es cuando el cliente intenta eliminar algun dato
+
+El verbo PATCH (similar al PUT, porque actualiza algo) puedo actualizar solo un dato.
+
+La peticion ALL, es para utilizar todos los verbos en determinada url
+
+----------------------------------------------------------------
+                   */ REQUEST - RESPONSE /*
+----------------------------------------------------------------
+
+El Request en su estructura esta conformado principalmente por un Endpoint (que puede ser la url de la pagina), el Header (donde se especifica en que formato se envia el dato (json)), y el Body (que es el dato en si, por ej, en formato {})
+
+Endpoint ---> /about
+Header ---> json
+Body ---> {}
+
+En el Response, se podria conformar de igual manera, y añadir en el Header, el status de la respuesta (200,404,500)
+Endpoint ---> /about
+Header ---> json
+      ----> 200
+Body ---> {}
+
+----------------------------------------------------------------
+                   */ PARAMS Y QUERY /*
+----------------------------------------------------------------
+
+*PARAMS
+Una manera de extraer los valores de los parametros de una request, es mediante req.params
+app.get('/hello/:username', (req, res) => {
+    res.send(`Hello ${req.params}`)
+})
+Nos devolveria en este caso ----> username: tucu
+Si quisieramos que solamente tome el valor "tucu" deberiamos agregar el nombre del params de la siguiente manera
+app.get('/hello/:username', (req, res) => {
+    res.send(`Hello ${req.params.username}`)
+})
+
+Estos datos se devuelven en tipo String, entonces podriamos utilizar ciertos metodos, depende lo que quiseramos hacer
+
+PONER TODO EN MAYUSCULA (toUpperCase)
+app.get('/hello/:username', (req, res) => {
+    res.send(`Hello ${req.params.username.toUpperCase()}`)
+})
+
+PARA CONVERTIR ESOS STRING EN NUMBER UTILIZO parseInt
+app.get('/add/:x/:y', (req, res) => {
+    const result = parseInt(req.params.x) + parseInt(req.params.y)
+    res.send(`Result: ${result}`)
+})
+
+Para utilizar codigo mas limpio, lo que deberia hacer es poner los valores en una constante, y ahorrar codigo
+app.get('/add/:x/:y', (req, res) => {
+    const {x, y} = req.params
+    res.send(`Result: ${parseInt(x) + parseInt(y)}`)
+})
+
+Puedo utilizar una condicional para enviar un archivo por ejemplo
+
+app.get('/users/:username/photo', (req, res) => {
+    if(req.params.username === "tucu") {
+        return res.sendFile("DJI_0001.JPG", {
+            root: __dirname
+        })
+    }
+    res.send('El usuario no tiene acceso')
+})
+Cuando se agrega el return, lo que hacemos es obligar a que se ejecute esa linea y devuelva una respuesta, de otra manera, mientras carga, iria a la siguiente linea y siempre daria como resultado 'El usuario no tiene acceso'
+
+De la misma manera, se utilizan los query, que se interpretan con un signo de interrogacion en la url, seguido de un igual con valor
+------------------------->query-valor<----------
+http://localhost:8000/user?name=tucu
+req.query.name 
+
+----------------------------------------------------------------
+                   */ MIDDLEWARE /*
+----------------------------------------------------------------
+
+Se trata de una logica que se aplica en medio del request del cliente, y la ruta a la que tiene que llegar. Entonces deberia pasar si o si primero por esta funcion.
+
+app.use((req, res, next) => {
+    console.log('Paso por aqui')
+//Para que siga a la siguiente funcion y obtenga la ruta, debo ejecutar el next
+    next()
+})
+De esta manera, podemos ejecutar logica para corrobar si tiene acceso o no, a la ruta buscada
+
+======= INSTALO UN MIDDLEWARE: MORGAN, PARA VER POR CONSOLA LAS PETICIONES QUE LLLEGAN (GENERA UN LOGGER)=====
+Una vez que lo instalo, tengo requerirlo al igual que express
+
