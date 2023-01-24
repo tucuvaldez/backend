@@ -99,3 +99,10 @@ De esta manera, podemos ejecutar logica para corrobar si tiene acceso o no, a la
 ======= INSTALO UN MIDDLEWARE: MORGAN, PARA VER POR CONSOLA LAS PETICIONES QUE LLLEGAN (GENERA UN LOGGER)=====
 Una vez que lo instalo, tengo requerirlo al igual que express
 
+----------------------------------------------------------------
+                   */ REST API /*
+----------------------------------------------------------------
+Practica en restapi.js
+
+Creo las rutas con distintos metodos (CRUD), para ver como funciona cada uno
+
