@@ -1,0 +1,50 @@
+[
+  {
+    "cant": 0,
+    "category": "Pc",
+    "description": [
+      "Phanteks Eclipse G360A Midi Tower (Black)",
+      "MSI GeForce RTX 3060 VENTUS 2X OC",
+      "Intel Core i5-12400F CPU",
+      "ASUS TUF GAMING B660-PLUS WIFI Motherboard",
+      "Cooler Master MWE Gold 550 V2 PSU"
+    ],
+    "name": "Complete i125 Epic Gaming PC",
+    "price": 7000,
+    "src": "/resources/img/pcGamer-1.jpg",
+    "stock": 50
+  },
+  {
+    "cant": 0,
+    "category": "Mouse",
+    "description": [
+      "Wireless mouse - 2.4 GHz wireless technology",
+      "4000 dpi Darkfield™ sensor detects everywhere",
+      "Fast charging, a full day of use in 3 minutes",
+      "Super fast scrolling",
+      "Logitech Easy-Switch™ technology - switch between devices",
+      "USB-C fast charging",
+      "Thumb buttons & thumb wheel",
+      "Number of buttons: 7"
+    ],
+    "name": "Logitech Flow Mouse",
+    "price": 300,
+    "src": "/resources/img/MouseGamer-1.jpg",
+    "stock": 50
+  },
+  {
+    "cant": 0,
+    "category": "Keyboard",
+    "description": [
+      "Keyboard form factor: Standard",
+      "Keyboard style: Straight",
+      "Device interface: RF wireless + Bluetooth",
+      "Keyboard key switch: Mechanical GL Tactile",
+      "Type of backlight: RGB LED"
+    ],
+    "name": "Logitech Keyboard",
+    "price": 350,
+    "src": "/resources/img/KeyboardGamer-1.jpg",
+    "stock": 50
+  }
+]
