@@ -102,7 +102,34 @@ Una vez que lo instalo, tengo requerirlo al igual que express
 ----------------------------------------------------------------
                    */ REST API /*
 ----------------------------------------------------------------
+Es un servidor que tiene url, que nos permite procesar datos
 Practica en restapi.js
 
-Creo las rutas con distintos metodos (CRUD), para ver como funciona cada uno
+Creo las rutas con distintos metodos (CRUD), para ver como funciona cada uno (en thunderclient)
+
+Dependiendo que base de datos se utilice, se reemplazaran los verbos en las funciones
+
+----------------------------------------------------------------
+                   */ STATIC /*
+----------------------------------------------------------------
+
+Se utiliza para acceder a las rutas de las carpetas publicas, utilizando el middleware y determinando la ruta y en que carpeta va a acceder
+Utilizamos el __dirname para que acceda dentro de la carpeta src, y encuentre la carpetas dentro y el modulo path nos permite concatenar directorios
+const path = "path"
+app.use("./public", express.static(path.join(__dirname, "public")))
+
+----------------------------------------------------------------
+                   */ EXPRESS ROUTER /*
+----------------------------------------------------------------
+
+Router, sirve para dividir archivos y unirlos en una sola app, es un modo de express
+Aqui se puede instalar las plantillas para setearlas, con 
+app.set('views', 'views') 
+app.set('view engine', 'elMotorDePlantilla')
+y utilizamos res.render('nombreDeArchivo')
+
+
+----------------------------------------------------------------
+                   */ ASYNC CODE /*
+----------------------------------------------------------------
 

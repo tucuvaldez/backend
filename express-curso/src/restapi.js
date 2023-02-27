@@ -3,7 +3,7 @@ const morgan = require("morgan");
 
 const app = express();
 //CREO MANUALMENTE UN ARREGLO DE JSON PARA EJEMPLO
-const products = [
+let products = [
   {
     id: 1,
     name: "Laptop",
@@ -31,19 +31,41 @@ app.post("/products", (req, res) => {
   console.log(products);
 });
 
-app.put("/products", (req, res) => {
-  res.send("Actualizando Productos");
+//UTILIZO MAP PARA RECORRER CADA UNO DE LOS ELEMENTOS DEUN ARRAY, BUSCANDO CON UNA PROPIEDAD EN ESTE CASO ID, Y ACTUALIZO TODO EL ARRAY, AGREGANDO DE NUEVO LO QUE YA ESTABA, MAS ESE PROD CON LA NUEVA INFORMACION
+app.put("/products/:id", (req, res) => {
+  const newData = req.body;
+  const productFound = products.find(
+    (prod) => prod.id === parseInt(req.params.id)
+  );
+  if (!productFound)
+    return res.status(404).send({ message: "Product not found" });
+  products = products.map((p) =>
+    p.id === parseInt(req.params.id) ? { ...p, ...newData } : p
+  );
+  res.json({ message: "Product updated" });
 });
 
-app.delete("/products", (req, res) => {
-  res.send("Borrando Productos");
+//PUEDO UTILIZAR EL METODO FILTER, YA QUE COMPARA LOS ID QUE SON DISTINTOS AL QUE ESTOY ENVIANDO, Y ME DEVUELVE TODOS LOS PRODUCTOS EXCEPTO EL QUE COINCIDE.
+//POR LO CUAL, SI GUARDO TODO ESE NUEVO ARREGLO, EL PROD QUE ENVIO POR ID, NO SE GUARDA
+app.delete("/products/:id", (req, res) => {
+  const productFound = products.find(
+    (prod) => prod.id === parseInt(req.params.id)
+  );
+  if (!productFound)
+    return res.status(404).send({ message: "Product not found" });
+
+  products = products.filter((prod) => prod.id !== parseInt(req.params.id));
+  console.log("Product deleted: " + productFound.name);
+  res.sendStatus(204);
 });
 
 //PARA OBTENER POR ID, DEBO UTILIZAR LA FUNCION FIND. DECLARO UNA CONSTANTE, BUSCO DENTRO DEL ARRAY EL PRODUCTO CON EL ID QUE NECESITO, Y LO DEVUELVO. PUEDO PONER SOLO 2 IGUALES (ya que compara un numero con un string), O PONER 3 Y AGREGAR EL parseInt PARA CONVERTIRLO PRIMERO A NUMERO
 app.get("/products/:id", (req, res) => {
-  const productFound = products.find((prod) => {
-    return prod.id == req.params.id;
-  });
+  const productFound = products.find(
+    (prod) => prod.id === parseInt(req.params.id)
+  );
+  if (!productFound)
+    return res.status(404).send({ message: "Product not found" });
   res.json(productFound);
 });
 
