@@ -6,8 +6,11 @@ import __dirname from "./utils.js";
 import viewsRouter from "./routes/views.router.js";
 import sessionsRouter from "./routes/sessions.router.js";
 import mongoose from "mongoose";
+import cluster from "cluster";
+import os from "os";
 
 const app = express();
+const CPUs = os.cpus().length;
 const PORT = process.env.PORT || 3000;
 mongoose.set("strictQuery", false);
 const connection = mongoose.connect(
@@ -39,7 +42,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", viewsRouter);
 app.use("/api/sessions", sessionsRouter);
 
-app.listen(PORT, () => {
-  console.log(`Listening on port: http://localhost:${PORT} 
+if (cluster.isPrimary) {
+  console.log(
+    `Proceso primario en PID: ${process.pid}. Generando procesos hijos`
+  );
+  for (let i = 0; i < CPUs; i++) {
+    cluster.fork();
+  }
+  cluster.on("exit", (worker) => {
+    cluster.fork();
+  });
+} else {
+  console.log(`Proceso worker en PID: ${process.pid}`);
+  app.listen(PORT, () => {
+    console.log(`Listening on port: http://localhost:${PORT} 
 `);
-});
+  });
+}
